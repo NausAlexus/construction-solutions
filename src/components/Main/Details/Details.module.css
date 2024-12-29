@@ -1,0 +1,112 @@
+.details {
+    width: 544px;
+    height: 544px;
+    display: grid;
+    grid-template-rows: repeat(2, 272fr);
+    grid-template-columns: repeat(2, 272fr);
+}
+
+.itemGrid1{
+    background: var(--Accent2-600);
+    padding: 24px;
+}
+.itemGrid2{
+    background-image: url("./../../../../public/BarnHouse_1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.itemGrid3{
+    background-image: url("./../../../../public/TaunHouse_1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.itemGrid4{
+    background: var(--Accent2-600);
+    padding: 24px;
+}
+.itemGrid__bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.262) 100%, rgba(0, 0, 0, 0.5) 0%);
+    padding: 24px;
+}
+.itemGrid__house{
+    color: var(--BG1-100);
+    font-family: Gilroy;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.details__btn{
+    background: transparent;
+    border:none;
+    display: flex;
+    align-items: center;
+    width: 122px;
+    height: 24px;
+    gap: 4px;
+    cursor: pointer;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--BG1-100);
+}
+.details__btn__img{
+    transition: transform 0.3s ease;
+}
+@media (min-width: 1025px) {
+    .details__btn:hover {
+        .details__btn__img{
+            transform: scale(1.2);
+        }
+    }
+}
+.itemGrid1,
+.itemGrid4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.details__item__text{
+    font-family: Gilroy;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 28.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--BG1-100);
+}
+/* Адаптируем под разрешение от 1024 до 1400px */
+@media (max-width: 1400px) {
+    .details {
+        width: 400px;
+        height: 400px;
+        display: grid;
+        grid-template-rows: repeat(2, 272fr);
+        grid-template-columns: repeat(2, 272fr);
+    }
+    .itemGrid__house{
+        font-size: 18px;
+    }
+    .details__btn{
+        font-size: 16px;
+    }
+    .details__item__text{
+        font-size: 18px;
+    }
+}
+
+/* Адаптируем под разрешение от 768 до 1024px */
+@media (max-width: 1024px) {
+    .details {
+        display: none;
+    }
+}

@@ -1,0 +1,240 @@
+.form {
+    width: 1356px;
+    height: 428px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 140px;
+    gap: 36px;
+    color: var(--Accent 2/700);
+}
+.form__img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.error{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 28px;
+    color: var(--Accent2-700);
+    text-align: center;
+    padding: 0 20px;
+    background-color: var(--BG1-50);
+    
+}
+.form__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form__content {
+    width: 50%;
+    position: relative;
+}
+
+.fromContent__title {
+    font-family: Gilroy;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 62.4px;
+    margin-bottom: 8px;
+}
+
+.fromContent__text {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    margin-bottom: 24px;
+}
+.fromContent__input {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+.fromContent__input label {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.4px;
+    margin-top: 20px;
+}
+.fromContent__input label span {
+    color: var(--Accent-500);
+}
+.fromContent__input:first-child {
+    margin-bottom: 16px;
+}
+.commentInput {
+    height: 120px;
+}
+
+.fromContent__input input,
+.fromContent__input textarea {
+    width: 428px;
+    padding: 20px 24px;
+    resize: none;
+    border: 1px solid var(--Accent2-700);
+
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.fromContent__checkbox {
+    margin-top: 46px;
+}
+.fromContent__checkbox button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 231px;
+    height: 52px;
+    background-color: var(--Accent-500);
+    color: var(--BG1-100);
+    border: none;
+
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.fromContent__checkbox button:hover {
+    background-color: var(--Accent-300);
+}
+
+/* Убираем стандартные стили чекбокса */
+.checkboxInput {
+    opacity: 0;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.customCheckbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+}
+
+.checkboxSlider {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border: 1px solid var(--Accent2-700);
+    transition: border-color 0.3s;
+    text-align: center;
+}
+
+.checkboxInput:checked + .checkboxSlider::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 7px;
+    width: 8px;
+    height: 14px;
+    border: solid var(--Accent-500);
+
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkboxInput:not(:checked) + .checkboxSlider {
+    border-color: rgba(132, 132, 132, 0.6);
+}
+
+.customCheckbox:focus .checkboxSlider {
+    border-color: var(--Accent-500);
+}
+
+/* Адаптируем под разрешение от 1024 до 1400px */
+@media (max-width: 1400px) {
+    .form {
+        padding: 0;
+        width: 1000px;
+        height: 534px;
+    }
+    .fromContent__input {
+        flex-direction: column;
+    }
+
+    .fromContent__input input,
+    .fromContent__input textarea {
+        padding: 16px 24px;
+    }
+    .fromContent__input {
+        height: 100%;
+    }
+    .fromContent__input:first-child {
+        margin-bottom: 16px;
+    }
+    .fromContent__input label {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .fromContent__checkbox {
+        margin-top: 27px;
+    }
+    .fromContent__checkbox button {
+        position: static;
+        margin-top: 32px;
+    }
+}
+
+/* Адаптируем под разрешение от 768 до 1024px */
+@media (max-width: 1024px) {
+    .form {
+        flex-direction: column-reverse;
+        height: 100%;
+        margin-bottom: 0;
+        padding: 0 20px;
+        width: 100%;
+    }
+    .form__content {
+        width: 100%;
+    }
+    .form__img {
+        width: 100%;
+        height: 200px;
+    }
+    .fromContent__input input,
+    .fromContent__input textarea {
+        width: 100%;
+    }
+}
+
+/* Адаптируем под разрешение от 425 до 768px */
+@media (max-width: 767px) {
+    .fromContent__title {
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+    .fromContent__text {
+        font-size: 15px;
+        line-height: 19.5px;
+    }
+    .fromContent__input label {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+    .fromContent__input input,
+    .fromContent__input textarea {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

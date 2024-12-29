@@ -1,0 +1,32 @@
+.map__container{
+    width: 1356px;
+    height: 480px;
+    margin: 0 auto;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    position: relative;
+    overflow: hidden;
+}
+.yandex__map{
+    width: 100%;
+    height: 100%;
+}
+
+/* Адаптируем под разрешение от 1024 до 1400px */
+@media (max-width: 1400px) {
+    .map__container{
+        width: 1000px;
+    }
+}
+
+/* Адаптируем под разрешение от 768 до 1024px */
+@media (max-width: 1024px) {
+    .map__container{
+        width: 100%;
+        margin-top: 72px;
+        margin-bottom: 72px;
+        height: 230px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

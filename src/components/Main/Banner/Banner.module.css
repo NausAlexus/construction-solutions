@@ -1,0 +1,64 @@
+.banner{
+    background-image: url("./../../../../public/background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.dots {
+    position: absolute;
+    bottom: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 12px;
+    border-radius: 50%;
+    background-color: var(--BG1-100);
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+.activeDot {
+    border-radius: 43px;
+    width: 24px;
+    background-color: var(--Accent-500);
+}
+
+.info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner__content{
+    width: 1356px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Адаптируем под разрешение от 1024 до 1400px */
+@media (max-width: 1400px) {
+    .banner__content{
+        width: 1000px;
+    }
+}
+
+/* Адаптируем под разрешение от 768 до 1024px */
+@media (max-width: 1024px) {
+    .banner{
+        align-items: start;
+    }
+    .banner__content{
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,126 @@
+.header {
+    position: absolute;
+    top: 0;
+    height: 97px;
+    width: 100%;
+    border-bottom: 1px solid var(--BG1-50);
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+}
+
+.header__content {
+    width: 1356px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+}
+.logo__title {
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    color: var(--BG1-100);
+}
+.logo__title2 {
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: var(--BG1-100);
+}
+
+.address__title,
+.tele__title {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.4px;
+    text-align: left;
+    color: var(--BG1-100);
+}
+.address__text,
+.tele__text {
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: var(--BG1-50);
+}
+.headerInfo {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
+}
+.headerInfo__callback {
+    border: 2px solid var(--Accent-500);
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    text-align: center;
+    color: var(--BG1-100);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 231px;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerInfo__callback:hover {
+    box-shadow: 0 0 8px var(--Accent-500);
+}
+
+.headerInfo__phone{
+    display: none;
+}
+
+/* Адаптируем под разрешение от 1024 до 1400px */
+@media (max-width: 1400px) {
+    .header {
+        padding: 0 30px;
+    }
+}
+
+/* Адаптируем под разрешение от 768 до 1024px */
+@media (max-width: 1024px) {
+    .header {
+        height: 42px;
+        margin-top: 16px;
+        padding: 0 20px;
+        border: none;
+    }
+    .header__content{
+        align-items: center;
+    }
+    .logo img {
+        width: 42px;
+    }
+    .logo__title {
+        font-size: 12px;
+        line-height: 15.6px;
+    }
+    .logo__title2 {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .headerInfo {
+        display: none;
+    }
+
+    .headerInfo__phone {
+        display: block;
+        width: 32px;
+        height: 32px;
+    }
+}
+

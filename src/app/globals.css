@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Gilroy;
+  src: url('../../public/fonts/Gilroy-ExtraBold.otf');
+}
+@font-face {
+  font-family: Helvetica;
+  src: url('../../public/fonts/helvetica_regular.otf');
+}
+@font-face {
+  font-family: Involve;
+  src: url('../../public/fonts/Involve-Regular.otf');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+:root{
+  --BG1-10: #fbfdfd10;
+  --BG1-50: #fbfdfd50;
+  --BG1-100: #FBFDFD;
+  --Accent2-50: #11414250;
+  --Grey: #848484;
+
+  --Accent-300: #F39779;
+  --Accent-500: #E97550;
+  --Accent-600: #E05D33;
+  --Accent2-300: #1A4A4B;
+  --Accent2-600: #114142;
+  --Accent2-700: #063536;
+}
